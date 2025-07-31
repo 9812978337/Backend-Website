@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* css of body */
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+/* css of input text */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+/* css of submit button */
+.submit{
+  text-decoration: none;
+  color: #FFF;
+  padding: 10px 30px;
+  border-block:2px ;
+  background-color:#ff6347;
+  transition: 0.6s ease;
+   transition: 0.6s ease;
+   font-size: 20px;
+}
+
+
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+    <!-- body started -->
+
+<h1 align="center">Feedback Form</h1>
+
+<div class="container">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="Firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="Lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Nepal">Nepal</option>
+      <option value="India">India</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <button type="button" onclick="myFunction()"><div class="submit"> Submit</button>
+  </form>
+</div>
+<script>
+    // my function called
+    function myFunction() {
+      var fname = document.getElementById('fname').value; //fname is stored in lname
+      var lname = document.getElementById('lname').value;//lname is stored in lname
+      var subject = document.getElementById('subject').value;//subject value is stored in subject
+  
+      if (fname.trim() === '' || lname.trim() === '' || subject.trim() === '') {
+        //if filled is empty than it run 
+        alert('Please fill in all fields');
+      }
+   //if value is fullfiled than it run
+      else{
+        alert("Thank You")
+      }
+    }
+  </script>
+  
+</body>
+</html>

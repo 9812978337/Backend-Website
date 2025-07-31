@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            flex: 0 0 40%;
+            /* 40% width, don't grow, don't shrink */
+            max-width: 50%;
+            height: 50%;
+            padding-top: 40px;
+            padding-bottom: 0%;
+        }
+
+        .product-details {
+            flex: 1;
+            /* Take remaining space */
+            padding-left: 20px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .product-description {
+            margin-top: 10px;
+            color: #181616;
+        }
+
+        .product-price {
+            font-size: 30px;
+            margin-top: 10px;
+            color: #1267b8;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .buy-now-button,
+        .add-to-cart-button {
+            flex: auto;
+            /* Allow them to grow or shrink as needed */
+            padding: 10px 40px;
+            margin-right: 10px;
+            background-color: #7eb4eb;
+            color: #1a1919;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 200px;
+        }
+
+        .buy-now-button:hover,
+        .add-to-cart-button:hover {
+            background-color: #111213;
+            color: #f3f5f7;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-container">
+        <img class="product-image" src="../images/Epson EcoTank Pro.jpg" alt="Product Image">
+        <div class="product-details">
+            <div class="product-title">
+                <h3>Epson EcoTank Pro ET-5150 Wireless Color All-in-One Supertank Printer with Scanner,
+                    Copier</h3>
+            </div>
+            <div class="product-price">Rs:67,000/-</div>
+            <table>
+                <tr>
+                    <td style="padding:20px; padding-right: 30px;">
+                        <h4>Brand</h4>
+                    </td>
+                    <td>Epson</td>
+
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;">
+                        <h4>Printing Technology</h4>
+                    </td>
+                    <td>Inkjet</td>
+                </tr>
+                <tr>
+                    <td style="padding-right:30px;">
+                        <h4>Special Feature</h4>
+                    </td>
+                    <td>Wireless</td>
+                </tr>
+                <tr class="line">
+                    <td>
+                        <h4>Model Name</h4>
+                    </td>
+                    <td>ET-5150</td>
+                </tr>
+            </table>
+        </div>
+        <div class="product-description">
+            <h4>About this item</h4>
+            <ol>
+                <li>2 Years of Unlimited Ink promo valid for ET-5150, ET-5170, ET-5180, ET-5800, ET-5850, ET-5880,
+                     ET-16600 or ET-16650 printers purchased from 10/1/2021 to 3/31/2024. Product must be registered
+                      within 30 days of purchase. Limit four 542 ink bottles per claim. Each claim cannot contain
+                       multiple bottles of the same color. Retain your empty 542 ink bottle for submission along 
+                       with rebate form. Promotion applies to ink only. Printer covered by Epson 2-year ltd wnty 
+                       with registration. For promo participation, you must register your product. See manufacturer's
+                        website for details.</li>
+                <li>Built for speed — up to 17 black/9.5 color ISO ppm print speed; no warmup time; fast first page out</li>
+                <li>Professional-quality color prints — Epson DURABrite ET pigment inks for crisp, vibrant prints in
+                     black-and-white and color.</li>
+
+            </ol>
+        </div>
+
+        <div class="action-buttons">
+            <button class="buy-now-button" id="openCheckout">Buy Now</button>
+            <button class="add-to-cart-button" onclick="showPopup()">Add to Cart</button>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div class="popup">
+                <h2>Checkout</h2>
+                <span class="close" id="closeCheckout">&times;</span>
+                <form id="checkoutForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="creditCard">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="COD">Cash on delivery</option>
+                        <option value="bankTransfer">Bank Transfer</option>
+                    </select>
+
+                    <label for="cardNumber">Card Number :</label>
+                    <input type="text" id="cardNumber" name="cardNumber">
+                    <button type="submit">Done</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/js.js"></script>
+</body>
+
+</html>

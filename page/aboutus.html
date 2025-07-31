@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="coursework" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/home.css"><!--linking to css-->
+<script src="js/js.js"></script><!--linking to js-->
+  <style>
+   /*css of body*/ body {
+      font-family: Arial, Helvetica, sans-serif;
+      
+    }
+/* css of flipcard */
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      display: flex;
+      float: left;
+      padding: 20px;
+      
+    }
+/* css of inner flipcard */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 200%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .flip-card-inner2 {
+      position: relative;
+      width: 100%;
+      height: 200%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+    .flip-card-inner3 {
+      position: relative;
+      width: 100%;
+      height: 200%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    }
+
+    .flip-card-inner4 {
+      position: relative;
+      width: 200%;
+      height: 200%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+/* Flip card hover effect */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card:hover .flip-card-inner2 {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card:hover .flip-card-inner3 {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card:hover .flip-card-inner4 {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height:100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<div id="header"><!-- header started-->
+  <header style="font-size: 20px;">
+            <a href="../Home_page.html" class="he"><img src="../images/logo.jpg" width="90px" height="90px" style="border-radius: 50%;"></a>
+          <div class="login">
+          <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&theme=glif" class="log">Login</a>
+        </div>  
+            
+
+        <ul>
+          <li class="active"><a href="#">About us</a></li>
+          <li><a href="../Home_page.html">Home</a></li>
+          <li><a href="Research.html">RESEARCH</a></li>
+          <li><a href="products.html">Products</a></li>
+
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="form.html">Feedback form</a></li>
+        </ul>
+      </div>
+  </header><!-- header end -->
+
+<body> 
+  <!-- Body start -->
+<div style="justify-content: center; text-align: center; top: 60px;" ><h1>Hamro Printer Team</h1></div>
+<!-- flip card -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="../images/ROShan (3).jpg" alt="" height="100%" width="100%">
+
+      </div>
+      <!-- flip card back -->
+      <div class="flip-card-back">
+        <h1 style="font-size: 50px;padding-bottom:100px ;">Roshan <br>thapa</h1>
+
+        <p style="color: black;font-size: 20px;">Hi I am the developer of hamro printer.</p>
+        <p style="color: black;font-size: 20px;"> IF you want to know me click on view More.</p>
+        <br>
+
+
+
+        <a href="cv.html" style="font-size: 20px;"> 
+          <!-- link in cv page -->
+          View More
+        </a>
+        
+        
+      </div>
+    </div>
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner2">
+      <div class="flip-card-front">
+        <img src="../images/Sabanta.jpeg" alt="" height="100%" width="100%">
+      </div>
+      <div class="flip-card-back">
+
+        <h2 style="font-size: 50px; padding-bottom:100px ;">Sabanta <br> Gautam</h2>
+        <p style="color: black;font-size: 20px;">Hi I am the developer of Hamro priter.</p>
+        <p style="color: black;font-size: 20px;"> IF you want to know me click on view More.</p>
+        <br>
+        <a href="cv1.html" style="text-decoration: none;font-size: 20px;">
+          View More
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner3">
+      <div class="flip-card-front">
+        <img src="../images/Rojina.jpg" alt="" height="100%" width="100%">
+
+      </div>
+      <div class="flip-card-back">
+
+        <h1 style="font-size: 50px;padding-bottom:100px ;">Rojina<br> Shrestha</h1>
+        <p style="color: black;font-size: 20px;">Hi I am the developer of Hamro printer.</p>
+        <p style="color: black;font-size: 20px;"> IF you want to know me click on view More.</p>
+        <br>
+        <a href="cv3.html" style="text-decoration: none;font-size: 20px;">
+          View More
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card">
+    <div class="flip-card-inner4">
+      <div class="flip-card-front">
+        <img src="../images/Sajja.jpg" alt="" height="100%" width="100%">
+
+      </div>
+      <div class="flip-card-back">
+
+        <h1 style="font-size: 40px;padding-bottom:100px ;">Sajja<br>Chaudhary</h1>
+        <p style="color: black; position: cover; font-size: 20px;">Hi I am the developer of Hamro printer.</p>
+        <p style="color: black; font-size: 20px;"> IF you want to know me click on view More</p>
+        <br>
+        <a href="cv2.html" style="text-decoration: none; font-size: 20px;">
+          View More
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <title>CV</title>
+<!-- end of the body -->
+
+</body>
+
+
+</html>

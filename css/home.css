@@ -1,0 +1,598 @@
+/* home page css*/
+*{/* full page style*/
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family:"century gothic"
+}
+/* header*/
+header{
+  margin: 0px;
+  padding: 10px;
+  position: fixed;
+  width: 100%; 
+  background: rgba(230, 77, 0, 0.6);
+
+/* icons of header*/
+}
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 60px
+}
+ul li{
+  display: inline-block;
+
+
+}
+
+ul li a{
+  text-decoration: none;
+  font-family: "Copperplate";
+  margin: 15px;
+  color: #000;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  transition: 0.6s ease
+
+}
+ul li a:hover{
+  background-color:#000;
+  color:#fff; 
+  border-radius:30px ;
+  font-family: "Copperplate";
+} 
+/* active icon of header*/
+ul li.active a{
+  background-color: #000;
+  color: #fff;
+  border-radius:30px ;
+  font-family: "Copperplate";
+  
+}
+/* login icon */
+div.login{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+}
+.log{
+  text-decoration: none;
+  font-family: Courier New;
+  display: block;
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
+  padding: 5px 10px;
+
+
+}
+.log:hover{
+  display: block;
+  background-color: rgba(0, 0, 0, 1.0);
+  color: lightgray;
+  border-radius: 30px;
+  font-family: Courier New;
+
+}
+/* Produce button*/
+.button{
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  transform: translate(-50%,-50%);
+  border-radius:30px ;
+  font-size:30px;
+  animation: produce linear;
+  animation-timeline: scroll();
+  z-index: 2px;
+}
+.btn{
+  font-family: "Lucida Handwriting";
+  text-decoration: none;
+  color: #8000ff;
+  padding: 10px 30px;
+  border: 2px solid #ff6347;
+  border-radius:30px ;
+  transition: 0.6s ease;
+  animation: mymove 5s infinite;
+}
+/* color changing animation*/
+@keyframes mymove {
+  50% {border-color: #8000ff;}
+  50% {color:#ff6347;}
+}
+/* Produce button when hover*/
+.btn:hover{
+  background-color:#ff6347;
+  color:#fff;
+  animation: mymove none;
+
+}
+/*body*/
+.parallax {
+  background-image: url("../images/11.jpg");
+  z-index: -1;
+  min-height: 800px; 
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* why us text css*/
+.lol span{
+  font-size: 50px;
+  color:hsl(0, 0%, 100%, 0.0);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-clip:text; /* colour background in text*/
+  background-image: linear-gradient(90deg,red,blue);
+  animation:color linear forwards; 
+  animation-timeline:view(); /*time of animation in view*/
+  animation-range-start:cover 20vh;/* starting time of amination*/
+  animation-range-end:cover 50vh;/* ending time of animation*/
+}
+/* text appering in viewing animation*/
+@keyframes color{
+  to{
+    background-size: 100% 100%;
+  }
+}
+/*comming soon poster*/
+.bgimg {
+  background-image: url('../images/comming.jpg');
+  height: 600px; 
+  image-rendering: high-quality;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px
+}
+/*text of comming soon */
+.middle {
+  position: absolute;
+  top: 220%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: fixed;
+  animation: produce linear;/* animation name*/
+  animation-timeline: scroll();/* startinh time of animation*/
+}
+/*left text in comming soon */
+.bottomleft {
+  position: absolute;
+  top: 250%;
+  left: 16px;
+}
+/* animation text moving left while scrolling*/
+@keyframes produce{
+  to{
+    transform: translateY(50px);
+  }
+}
+/* product card css*/
+.main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 80px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  display: block;
+  color: black;
+  padding: 15px;
+}
+.content:hover{
+  display: block;
+  box-shadow: 10px 10px 10px 10px lightblue;
+  transform: scale(1.2,1.2 );
+}
+/* some more button */
+.more{
+  top: 350%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  border-radius:30px ;
+  font-size:30px;
+
+
+}
+.mor{
+  font-family: "Lucida Handwriting";
+  text-decoration: none;
+  color: #000;
+  padding: 10px 30px;
+  border: 2px solid transparent;
+  border-radius:30px ;
+  transition: 0.6s ease
+}
+/*hover */
+.mor:hover{
+  background-color:#ff6347;
+  color:#fff;
+
+} 
+/*location image css*/
+
+.location:hover{
+  display: block;
+  box-shadow:5px white;
+  transform: scale(1.5,1.5 );
+}
+.location{
+  top: 200px;
+}
+
+
+
+
+/* css of reseacrh page started*/
+
+
+
+.research {
+  background-image: url('../images/research.png');
+  height: 450px; 
+  image-rendering: high-quality;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* css for amazon logo*/
+.amazon{
+background-image: url('../images/amazon.png');
+  height: 400px; 
+  image-rendering: high-quality;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*css for daraz logo*/
+.daraz{
+  background-image: url('../images/daraz.png');
+  height: 400px; 
+  image-rendering: high-quality;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*css for flipkart logo*/
+.flipkart{
+  background-image: url('../images/flipkart.webp');
+  height: 400px; 
+  image-rendering: high-quality;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position-y: -50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*css of product page*/
+*{
+font-family: 'Nunito', sans-serif;
+    margin:5px; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+ }
+
+ 
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+ body{
+    background: #eee;
+ }
+ .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 150px;
+    margin-left: 50px;
+    position: fixed;
+}
+
+/* dropdown menu*/
+.dropdown {
+    position: fixed;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: larger;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(165, 154, 154);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: black;
+    color: aliceblue;
+}
+
+ 
+ .container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem;
+ }
+ 
+ .container .title{
+    font-size: 3.5rem;
+    color:#444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+ }
+ 
+ .container .products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+ }
+ 
+ .container .products-container .product{
+    text-align: center;
+    padding:3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+ }
+ 
+ .container .products-container .product:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+ }
+ 
+ .container .products-container .product img{
+    height: 25rem;
+ }
+ 
+ .container .products-container .product:hover img{
+    transform: scale(.9);
+ }
+ 
+ .container .products-container .product h3{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:#444;
+ }
+ 
+ .container .products-container .product:hover h3{
+    color:#27ae60;
+ }
+ 
+ .container .products-container .product .price{
+    font-size: 2rem;
+    color:#444;
+    padding-bottom: 20px;
+    padding-top: 20px;
+ }
+ .product button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+.product button:hover {
+    opacity: 0.7;
+}
+ 
+/*css of blog*/
+
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+.containr{
+  background-color:aliceblue;
+}
+
+.news {
+  padding: 4.8px 0 9.6px 0;
+  text-align: center;
+}
+
+.news-heading {
+  font-size: 24px;
+  line-height: 1.4;
+  color: #333;
+}
+
+#email-box{
+  border: 1px solid #101010;
+}
+
+input[type="email"] {
+  display: inline-flex;
+  width: 60%;
+  padding: 18px 36px;
+  margin: 8px 0;
+  
+  box-sizing: border-box;
+  height: 54px;
+  margin-top: 18px;
+  border-radius: 20px;
+  border: none;
+}
+input,
+input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 3;
+}
+
+.bt {
+  margin-left: -160px;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px 32px;
+  border-radius: 20px;
+
+  border: none;
+  cursor: pointer;
+  background-color: #4f4f4f;
+  color: #fff;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.popup input,
+.popup textarea,
+.popup select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup button:hover {
+  background-color: #45a049;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+  
+
